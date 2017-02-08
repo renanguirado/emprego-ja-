@@ -1,13 +1,7 @@
 <h1>Bem vindo ao Emprego Já<h1>
 
-Vaga de Dev
-Campus Code
-São Paulo
-
-UX Sen
-
 <% @jobs.each do |job| %>
-  <%=job.title%>
+  <%= link_to  job.title, job_path(job.id)%>
   <%=job.category%>
   <%=job.company%>
   <%=job.location%>
