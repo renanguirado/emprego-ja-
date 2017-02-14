@@ -6,8 +6,8 @@ class CompaniesController < ApplicationController
 
   def create
     company_params = params.require(:company).permit(:name, :location, :mail, :phone)
-    @company = Company.new(company_params)
-
+    @company = Company.create(company_params)
+    redirect_to @company
   end
 
   def show
