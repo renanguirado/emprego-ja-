@@ -2,3 +2,11 @@
 <%= @company.location%>
 <%= @company.mail%>
 <%= @company.phone%>
+  <% if @company.jobs.empty? %>
+    'Nenhuma vaga disponível'
+  <% else %>
+    <% @company.jobs.each do |job|%>
+      <%= job.title %>
+      <%= job.category %>
+    <%end%>
+  <%end%>

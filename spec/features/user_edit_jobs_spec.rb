@@ -43,9 +43,10 @@ feature 'User edit jobs' do
                      location: 'São Paulo')
 
     google = Company.create(name: 'Google',
-                             location: 'São Paulo',
-                             mail: 'google@gmail.com.br',
-                             phone: '4444-8888')
+                            location: 'São Paulo',
+                            mail: 'contato@campus.com.br',
+                            phone: '2369-3476')
+
 
     visit edit_job_path(job)
 

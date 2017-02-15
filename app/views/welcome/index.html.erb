@@ -4,8 +4,16 @@
   <%= link_to  job.title, job_path(job.id)%>
   <%=job.category%>
   <%=job.company.name%>
+  <%=job.title%>
+  <%=job.category%>
   <%=job.location%>
   <% if job.featured? %>
    <strong>Destaque</strong>
    <%end%>
+<%end%>
+
+<% @companies.each do |company| %>
+  <%= link_to company.name, company_path(company.id) %>
+
+
 <%end%>
