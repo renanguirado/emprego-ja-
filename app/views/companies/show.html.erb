@@ -7,6 +7,6 @@
   <% else %>
     <% @company.jobs.each do |job|%>
       <%= job.title %>
-      <%= job.category %>
+      <%= job.category.name %>
     <%end%>
   <%end%>
